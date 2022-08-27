@@ -16,7 +16,7 @@ app.get('/status', (req, res) => {
 
 
 app.post('/slave-creates-a-qr', (req, res) => {
-  QRCode.toDataURL(req.body.qr, function (err, url) {
+  QRCode.toDataURL(req.body.inner_code, function (err, url) {
     res.send(`<div style='position:relative'>
                 <img style ="position:absolute; top:170px; transform:rotate(135deg)" src="https://fpay.cl/wp-content/uploads/2020/04/chevron-fpay-amarillo.svg" width="60" height="70" data-src="https://fpay.cl/wp-content/uploads/2020/04/chevron-fpay-amarillo.svg" alt="chevron fpay amarillo">
                 <img style ="position:absolute; top:170px; left:190px; transform:rotate(45deg)" src="https://fpay.cl/wp-content/uploads/2020/04/chevron-fpay-rojo.svg" width="60" height="70" data-src="https://fpay.cl/wp-content/uploads/2020/04/chevron-fpay-rojo.svg" alt="chevron fpay rojo">
