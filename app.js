@@ -7,7 +7,7 @@ app.use(express.json())
 app.use(express.static('public'))
 
 //conf
-const port = 3001
+const port = 443
 
 //rutas
 app.get('/status', (req, res) => {
