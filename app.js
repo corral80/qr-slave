@@ -30,8 +30,6 @@ app.post('/slave-creates-a-qr', (req, res) => {
 })
 
 
-
-
 //run run
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
