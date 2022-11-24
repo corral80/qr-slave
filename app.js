@@ -7,7 +7,8 @@ app.use(express.json())
 app.use(express.static('public'))
 
 //conf
-const port = 10000
+app.set('port', process.env.PORT || 10000);
+
 
 //rutas
 app.get('/status', (req, res) => {
@@ -32,5 +33,5 @@ app.post('/slave-creates-a-qr', (req, res) => {
 
 //run run
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Example app listening on port ${app.get('port')}`)
 })
